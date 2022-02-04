@@ -11,34 +11,41 @@ import { Categoria } from './categoria.module';
 })
 export class CategoriaService {
 
-  baseUrl:String = environment.baseUrl;
+  baseUrl: String = environment.baseUrl;
 
-  constructor(private http: HttpClient, private snack:MatSnackBar) {}
-  findAll():Observable<Categoria[]>{
+  constructor(private http: HttpClient, private snack: MatSnackBar) { }
+  findAll(): Observable<Categoria[]> {
     const url = `${this.baseUrl}/categorias`;
     return this.http.get<Categoria[]>(url);
   }
 
-  findById(id:String):Observable<Categoria>{
-    const url = `${this.baseUrl}/categorias/${id}`;
+  findById(id: String): Observable<Categoria> {
+    const url = `${this.baseUrl}/categorias/${id}`
     return this.http.get<Categoria>(url);
   }
 
-  create(categoria:Categoria):Observable<Categoria>{
-    const url = `${this.baseUrl}/categorias`;
+  create(categoria: Categoria): Observable<Categoria> {
+    const url = `${this.baseUrl}/categorias`
     return this.http.post<Categoria>(url, categoria);
   }
 
-  delete(id:String):Observable<void>{
+  update(categoria: Categoria): Observable<void> {
+    const url = `${this.baseUrl}/categorias/${categoria.id}`;
+    return this.http.put<void>(url, categoria);
+  }
+
+
+
+  delete(id: String): Observable<void> {
     const url = `${this.baseUrl}/categorias/${id}`;
     return this.http.delete<void>(url);
   }
 
-  mensagem(str:String): void{
-    this.snack.open(`${str}`, 'OK',{
+  mensagem(str: String): void {
+    this.snack.open(`${str}`, 'OK', {
       horizontalPosition: 'end',
       verticalPosition: 'top',
-      duration:3000
+      duration: 3000
     })
   }
 }

@@ -1,0 +1,26 @@
+<form>
+  <h1>Editando uma nova Categoria</h1>
+
+  <mat-form-field class="form" appearance="legacy">
+    <mat-label>Nome</mat-label>
+    <input [(ngModel)]="categoria.nome" matInput type="text" name="nome" placeholder="ex: terror" />
+  </mat-form-field>
+  <mat-form-field class="form" appearance="legacy">
+    <mat-label>Descrição</mat-label>
+    <textarea
+    [(ngModel)]="categoria.descricao"
+      matInput
+      type="text"
+      name="descricao"
+      placeholder="ex: Filme de terror"
+    ></textarea>
+  </mat-form-field>
+  <div class="button">
+    <button (click)="update()" class="botao1 mat-elevation-z8" mat-raised-button color="primary">
+      Editar
+    </button>
+    <button (click)="cancel()" class="botao2 mat-elevation-z8" mat-raised-button color="primary">
+      Cancelar
+    </button>
+  </div>
+</form>

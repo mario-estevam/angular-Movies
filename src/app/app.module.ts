@@ -1,3 +1,4 @@
+import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
 import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
 import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
 import { BrowserModule } from '@angular/platform-browser';
@@ -32,7 +33,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     HomeComponent,
     CategoriaReadComponent,
     CategoriaCreateComponent,
-    CategoriaDeleteComponent
+    CategoriaDeleteComponent,
+    CategoriaUpdateComponent
   ],
   imports: [
     BrowserModule,
