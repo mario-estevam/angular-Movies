@@ -1,0 +1,19 @@
+.content{
+  width: 90%;
+  margin: 1.4rem auto auto auto;
+}
+
+.titulo{
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.titulo h1{
+  font-size: rgb(221, 220, 220);
+  font-weight: 500;
+}
+
+.tabela
+{
+  width: 100%;
+}
