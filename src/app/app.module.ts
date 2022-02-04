@@ -1,3 +1,4 @@
+import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
 import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -30,7 +31,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     NavComponent,
     HomeComponent,
     CategoriaReadComponent,
-    CategoriaCreateComponent
+    CategoriaCreateComponent,
+    CategoriaDeleteComponent
   ],
   imports: [
     BrowserModule,

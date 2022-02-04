@@ -1,6 +1,6 @@
 export interface Categoria
 {
-  id?:String | number,
+  id?:String,
   nome:String,
   descricao:String
 }
