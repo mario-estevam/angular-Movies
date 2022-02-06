@@ -1,0 +1,37 @@
+<form>
+  <h1>Criando um novo filme</h1>
+
+  <mat-form-field class="form" appearance="legacy">
+    <mat-label>Titulo</mat-label>
+    <input matInput [formControl]="titulo" required [(ngModel)]="filme.titulo" type="text" name="titulo" placeholder="ex: batman vs superman" maxlength="100" />
+    <mat-error *ngIf="titulo.invalid">{{ getMessage() }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="form" appearance="legacy">
+    <mat-label>Diretor</mat-label>
+    <input matInput [formControl]="diretor" required [(ngModel)]="filme.diretor" type="text" name="diretor" placeholder="ex: James Gun" maxlength="100"/>
+    <mat-error *ngIf="diretor.invalid">{{ getMessage() }}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field  class="form"  appearance="legacy">
+    <mat-label>Resenha</mat-label>
+    <textarea
+    [formControl]="resenha" required
+     maxlength="2000"
+      matInput
+      [(ngModel)]="filme.resenha"
+      type="text"
+      name="descricao"
+      placeholder="ex: esse filme fala sobre..."
+    ></textarea>
+    <mat-error *ngIf="resenha.invalid">{{ getMessage() }}</mat-error>
+  </mat-form-field>
+  <div class="button">
+    <button [disabled]="getMessage()" (click)="create()" class="botao1 mat-elevation-z8" mat-raised-button color="primary">
+      Criar
+    </button>
+    <button  (click)="cancel()"  class="botao2 mat-elevation-z8" mat-raised-button color="primary">
+      Cancelar
+    </button>
+  </div>
+</form>

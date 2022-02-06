@@ -1,32 +1,28 @@
 <div class="content">
-  <div class="titulo">
-    <h1>Filmes</h1>
+
+  <div class="title">
+    <h1>LIVROS</h1>
   </div>
 
-  <button class="botao mat-elevation-z8" mat-raised-button color="primary">Nova Filme</button>
+  <button class="mat-elevation-z8" (click)="criarFime()" mat-stroked-button color="primary"> NOVO LIVRO </button>
 
   <div class="mat-elevation-z8 content-table">
-    <table class="tabela" mat-table [dataSource]="filmes">
-      <!--- Note that these columns can be defined in any order.
-            The actual rendered columns are set as a property on the row definition" -->
+    <table class="table" mat-table [dataSource]="filmes" >
 
-      <!-- Position Column -->
       <ng-container matColumnDef="id">
         <th mat-header-cell *matHeaderCellDef>ID</th>
         <td mat-cell *matCellDef="let row">{{ row.id }}</td>
       </ng-container>
 
-      <!-- Name Column -->
-      <ng-container matColumnDef="nome">
+      <ng-container matColumnDef="titulo">
         <th mat-header-cell *matHeaderCellDef>Titulo</th>
         <td mat-cell *matCellDef="let row">{{ row.titulo }}</td>
       </ng-container>
 
-      <!-- Weight Column -->
-      <ng-container matColumnDef="filmes" class="filmes">
+      <ng-container matColumnDef="resenha">
         <th mat-header-cell *matHeaderCellDef>Detalhes</th>
         <td mat-cell *matCellDef="let row">
-          <a class="filme" >
+          <a class="filmes" routerLink="{{ row.id }}/read">
             <mat-icon class="material icons">movie</mat-icon>
           </a>
         </td>
@@ -34,13 +30,13 @@
 
       <!-- Symbol Column -->
       <ng-container matColumnDef="acoes">
-        <th mat-header-cell *matHeaderCellDef>Ações</th>
+        <th class="mat-header" mat-header-cell *matHeaderCellDef>Ações</th>
         <td mat-cell *matCellDef="let row">
-          <a class="edit"   href="#">
-            <mat-icon class="material icons">edit</mat-icon>
+          <a class="edit" routerLink="{{ row.id }}/update">
+            <i class="material-icons">edit</i>
           </a>
-          <a class="delete"   href="#">
-            <mat-icon class="material icons">delete</mat-icon>
+          <a class="delete" routerLink="{{ row.id }}/delete">
+            <i class="material-icons">delete</i>
           </a>
         </td>
       </ng-container>

@@ -1,39 +1,41 @@
-.content{
+.content {
   width: 90%;
   margin: 1.4rem auto auto auto;
 }
 
-.titulo{
+.title {
   text-align: center;
   margin-bottom: 3rem;
 }
 
-.titulo h1{
-  font-size: rgb(221, 220, 220);
+.title h1 {
+  font-size: 2rem;
+  color: rgb(212, 207, 207);
   font-weight: 500;
 }
 
-.botao{
-  margin-bottom: 1rem;
-  background-color: rgb(72, 156, 58);
-  color: white;
-  align-items: flex-end;
+button {
+  margin-bottom: .8rem;
 }
-.tabela
-{
+
+.table {
   width: 100%;
 }
 
-.edit{
-  color:white;
+.filmes {
+  color: rgb(37, 125, 240);
+  margin-left: .6rem;
 }
 
-.delete{
-  color: rgb(194, 73, 73);
-  margin-left: 1rem;
+.edit {
+  color: rgb(206, 173, 24);
 }
 
-.filme{
-  margin-left: .4rem;
-  color: white;
+.delete {
+  color: rgb(228, 56, 56);
+  margin-left: .5rem;
+}
+
+.mat-header {
+  width: 5rem;
 }

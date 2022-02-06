@@ -1,3 +1,4 @@
+import { FilmeCreateComponent } from './components/views/filmes/filme-create/filme-create.component';
 import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
 import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
 import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
@@ -24,6 +25,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { FilmeReadAllComponent } from './components/views/filmes/filme-read-all/filme-read-all.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FilmeUpdateComponent } from './components/views/filmes/filme-update/filme-update.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,9 @@ import { FilmeReadAllComponent } from './components/views/filmes/filme-read-all/
     CategoriaCreateComponent,
     CategoriaDeleteComponent,
     CategoriaUpdateComponent,
-    FilmeReadAllComponent
+    FilmeReadAllComponent,
+    FilmeCreateComponent,
+    FilmeUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +58,8 @@ import { FilmeReadAllComponent } from './components/views/filmes/filme-read-all/
     FormsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
