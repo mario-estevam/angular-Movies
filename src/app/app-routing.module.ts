@@ -1,3 +1,5 @@
+import { FilmeReadComponent } from './components/views/filmes/filme-read/filme-read.component';
+import { FilmeDeleteComponent } from './components/views/filmes/filme-delete/filme-delete.component';
 import { FilmeUpdateComponent } from './components/views/filmes/filme-update/filme-update.component';
 import { FilmeCreateComponent } from './components/views/filmes/filme-create/filme-create.component';
 import { FilmeReadAllComponent } from './components/views/filmes/filme-read-all/filme-read-all.component';
@@ -41,6 +43,14 @@ const routes: Routes = [
   {
     path:'categorias/:id_cat/filmes/:id/update',
     component:FilmeUpdateComponent
+  },
+  {
+    path:'categorias/:id_cat/filmes/:id/delete',
+    component:FilmeDeleteComponent
+  },
+  {
+    path:'categorias/:id_cat/filmes/:id/read',
+    component:FilmeReadComponent
   }
 ];
 

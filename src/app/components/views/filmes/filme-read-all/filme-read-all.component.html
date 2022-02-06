@@ -1,10 +1,10 @@
 <div class="content">
 
   <div class="title">
-    <h1>LIVROS</h1>
+    <h1>Filmes</h1>
   </div>
 
-  <button class="mat-elevation-z8" (click)="criarFime()" mat-stroked-button color="primary"> NOVO LIVRO </button>
+  <button class="mat-elevation-z8 color" (click)="criarFilme()" mat-stroked-button color="primary"> Novo Filme </button>
 
   <div class="mat-elevation-z8 content-table">
     <table class="table" mat-table [dataSource]="filmes" >
@@ -23,7 +23,7 @@
         <th mat-header-cell *matHeaderCellDef>Detalhes</th>
         <td mat-cell *matCellDef="let row">
           <a class="filmes" routerLink="{{ row.id }}/read">
-            <mat-icon class="material icons">movie</mat-icon>
+            <mat-icon class="material icons">local_movies</mat-icon>
           </a>
         </td>
       </ng-container>

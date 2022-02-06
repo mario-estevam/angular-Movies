@@ -28,7 +28,7 @@ export class FilmeReadAllComponent implements OnInit {
     })
   }
 
-  criarFime(): void {
+  criarFilme(): void {
     this.router.navigate([`categorias/${this.id_cat}/filmes/create`])
   }
 

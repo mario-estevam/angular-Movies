@@ -2,6 +2,10 @@
   width: 90%;
   margin: 1.4rem auto auto auto;
 }
+.color{
+  color: white;
+  background-color: rgb(107, 99, 216);
+}
 
 .title {
   text-align: center;
@@ -23,12 +27,12 @@ button {
 }
 
 .filmes {
-  color: rgb(37, 125, 240);
+  color: rgb(255, 255, 255);
   margin-left: .6rem;
 }
 
 .edit {
-  color: rgb(206, 173, 24);
+  color: rgb(255, 255, 255);
 }
 
 .delete {

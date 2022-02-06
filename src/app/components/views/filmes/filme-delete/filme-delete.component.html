@@ -1,0 +1,55 @@
+<form>
+  <h1>Atualizando um filme</h1>
+
+  <mat-form-field class="form" appearance="legacy">
+    <mat-label>Titulo</mat-label>
+    <input
+      matInput
+      [(ngModel)]="filme.titulo"
+      type="text"
+      name="titulo"
+      disabled
+    />
+
+  </mat-form-field>
+
+  <mat-form-field class="form" appearance="legacy">
+    <mat-label>Diretor</mat-label>
+    <input
+      matInput
+      [(ngModel)]="filme.diretor"
+      type="text"
+      name="diretor"
+      disabled
+    />
+  </mat-form-field>
+
+  <mat-form-field class="form" appearance="legacy">
+    <mat-label>Resenha</mat-label>
+    <textarea
+      matInput
+      [(ngModel)]="filme.resenha"
+      type="text"
+      name="descricao"
+      disabled
+    ></textarea>
+  </mat-form-field>
+  <div class="button">
+    <button
+      (click)="delete()"
+      class="botao1 mat-elevation-z8"
+      mat-raised-button
+      color="primary"
+    >
+      Deletar
+    </button>
+    <button
+      (click)="cancel()"
+      class="botao2 mat-elevation-z8"
+      mat-raised-button
+      color="primary"
+    >
+      Cancelar
+    </button>
+  </div>
+</form>
