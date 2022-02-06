@@ -23,6 +23,7 @@ import { FormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { FilmeReadAllComponent } from './components/views/filmes/filme-read-all/filme-read-all.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     CategoriaReadComponent,
     CategoriaCreateComponent,
     CategoriaDeleteComponent,
-    CategoriaUpdateComponent
+    CategoriaUpdateComponent,
+    FilmeReadAllComponent
   ],
   imports: [
     BrowserModule,
